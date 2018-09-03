@@ -4,6 +4,15 @@ Installation
 ------------
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
+Add repository to composer.json
+```
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@gitlab.devup.cc:module/log-table-action.git"
+    }
+  ]
+```
 Either run
 
 ```
