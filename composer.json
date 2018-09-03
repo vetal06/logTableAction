@@ -1,0 +1,21 @@
+{
+  "name": "dvlp/log-table-action-module",
+  "version": "0.0.1",
+  "description": "Log api",
+  "keywords": [
+    "yii2",
+    "api"
+  ],
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.0",
+    "yiisoft/yii2": "~2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "dvlp\\logTableAction\\": "src/"
+    }
+  }
+}
