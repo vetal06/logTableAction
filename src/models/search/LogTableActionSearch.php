@@ -16,12 +16,13 @@ class LogTableActionSearch extends Model implements ApiSearchInterface
     public $user_id;
     public $data;
     public $data_changed;
+    public $created_at;
 
     public function rules()
     {
         return [
             [['id', 'table_id', 'user_id'], 'integer'],
-            [['action', 'table_name', 'user_ip', 'data', 'data_changed'], 'string']
+            [['action', 'table_name', 'user_ip', 'data', 'data_changed', 'created_at'], 'string']
         ];
     }
 
@@ -42,6 +43,7 @@ class LogTableActionSearch extends Model implements ApiSearchInterface
             $query->andFilterWhere(['like', 'data', $this->data]);
             $query->andFilterWhere(['like', 'data_changed', $this->data_changed]);
             $query->andFilterWhere(['like', 'table_name', $this->table_name]);
+            $query->andFilterWhere(['like', 'created_at', $this->created_at]);
         }
 
         return $query;
@@ -59,7 +61,7 @@ class LogTableActionSearch extends Model implements ApiSearchInterface
 //                'attributes' => [
 //                    'created_at'
 //                ],
-                'defaultOrder' => ['created_at' => SORT_DESC]
+                'defaultOrder' => ['id' => SORT_DESC]
             ]
         ]);
 

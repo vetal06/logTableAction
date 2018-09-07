@@ -81,6 +81,7 @@ class LogTableAction extends ActiveRecord
             'user_id' => 'Пользователь',
             'data' => 'Данные',
             'data_changed' => 'Изменненные данные',
+            'created_at' => 'Дата',
         ]);
     }
 

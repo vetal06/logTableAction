@@ -18,6 +18,10 @@ $columns = [
 
     ],
     [
+        'attribute' => 'created_at',
+
+    ],
+    [
         'attribute' => 'action',
 
     ],
