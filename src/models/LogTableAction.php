@@ -100,7 +100,7 @@ class LogTableAction extends ActiveRecord
         $userIp = null;
         $userId = null;
         try{
-            $userIp = Yii::$app->request->getRemoteIP();
+            $userIp = ArrayHelper::getValue($_SERVER, 'HTTP_X_REAL_IP', Yii::$app->request->getRemoteIP());
             $userId = Yii::$app->user->id;
         }catch (\Exception $e) {
 
