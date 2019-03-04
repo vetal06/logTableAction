@@ -41,7 +41,7 @@ class Dependency
      * @param $table
      * @return array
      */
-    public function getDependencyTables($table) : array
+    public function getDependencyTables($table)
     {
         $name = \Yii::$app->db->schema->getRawTableName($table);
         return $this->driver->getDependencyTables($name);

@@ -112,7 +112,7 @@ trait LogTableActionTrait
      * @param LogTableActionEvent $event
      * @return array
      */
-    public static function lbeforeStaticDeleteAll(LogTableActionEvent $event): array
+    public static function lbeforeStaticDeleteAll(LogTableActionEvent $event)
     {
         $models = self::find()->andWhere($event->condition, $event->params)->all();
         $dep = new Dependency();
@@ -141,7 +141,7 @@ trait LogTableActionTrait
     /**
      * @return bool
      */
-    public static function checkStaticEventEnabled() : bool
+    public static function checkStaticEventEnabled()
     {
         return (bool)preg_match('/^backend/', static::class);
     }
