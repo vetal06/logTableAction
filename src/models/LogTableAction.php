@@ -102,6 +102,7 @@ class LogTableAction extends ActiveRecord
         try{
             $userIp = ArrayHelper::getValue($_SERVER, 'HTTP_X_REAL_IP', Yii::$app->request->getRemoteIP());
             $userId = Yii::$app->user->id;
+            $tableName = str_replace('`', '', Yii::$app->db->createCommand($tableName)->getRawSql());
         }catch (\Exception $e) {
 
         }
