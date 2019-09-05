@@ -73,7 +73,9 @@ trait LogTableActionTrait
         $model = $this;
         $dataArray = (array)$model->getAttributes();
         $olDataArray = (array)$model->oldAttributes;
-        $this->dataChanged = array_diff($olDataArray, $dataArray);
+        $diffOne = array_diff($olDataArray, $dataArray);
+        $diffSecond = array_diff($dataArray, $olDataArray);
+        $this->dataChanged = ArrayHelper::merge($diffOne, $diffSecond);
     }
 
     /**
