@@ -9,7 +9,7 @@ Add repository to composer.json
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@gitlab.devup.cc:module/log-table-action.git"
+      "url": "git@log-table-action.git"
     }
   ]
 ```
